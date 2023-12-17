@@ -5,14 +5,16 @@ const FetchData = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const FetchData = async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch(url);
+        const users = await response.json();
+        setUsers(users);
       } catch (error) {
         console.log(error);
       }
     };
-    FetchData();
+    fetchData();
   }, []);
   return (
     <section>

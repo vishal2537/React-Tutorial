@@ -1,6 +1,5 @@
 import { people } from "../../../data";
 import Person from "./Person";
-
 const List = () => {
   return (
     <div>
@@ -10,5 +9,4 @@ const List = () => {
     </div>
   );
 };
-
 export default List;

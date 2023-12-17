@@ -9,14 +9,16 @@ const UserChallenge = () => {
     e.preventDefault();
     // do something
     console.log(name);
-    // if no value,do nothing
+    // if no value, do nothing
     if (!name) return;
-    // if value,setup new user and add to current users
+    // if value, setup new user and add to current users
     const fakeId = Date.now();
     console.log(fakeId);
-    const newUser = { id: fakeId, name: name };
-    const updateUsers = [...users, newUser];
-    setUsers(updateUsers);
+    // const newUser = { id: fakeId, name: name };
+    const newUser = { id: fakeId, name };
+    console.log(newUser )
+    const updatedUsers = [...users, newUser];
+    setUsers(updatedUsers);
     // set back to empty
     setName("");
   };
@@ -25,7 +27,6 @@ const UserChallenge = () => {
     const updatedUsers = users.filter((person) => person.id !== id);
     setUsers(updatedUsers);
   };
-
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
@@ -36,7 +37,9 @@ const UserChallenge = () => {
           </label>
           <input
             type="text"
-            className={(e) => setName(e.target.value)}
+            className="form-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             id="name"
           />
         </div>
@@ -45,8 +48,9 @@ const UserChallenge = () => {
           submit
         </button>
       </form>
-
+      {/* render users */}
       <h2>users</h2>
+
       {users.map((user) => {
         return (
           <div key={user.id}>
@@ -60,5 +64,4 @@ const UserChallenge = () => {
     </div>
   );
 };
-
 export default UserChallenge;

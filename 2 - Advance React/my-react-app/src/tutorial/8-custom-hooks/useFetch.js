@@ -11,25 +11,27 @@ const useFetch = (url) => {
     const fetchData = async () => {
       try {
         const resp = await fetch(url);
+
         if (!resp.ok) {
           setIsError(true);
           setIsLoading(false);
           return;
-          }
-        //   change to response 
+        }
+        // change to response
         const response = await resp.json();
         setData(response);
       } catch (error) {
         setIsError(true);
         // console.log(error);
-        }
-        // hide loading
-        setIsLoading(false)
-      };
-      //   invoke fetch data
-      fetchData()
+      }
+      // hide loading
+      setIsLoading(false);
+    };
+    // invoke fetch data
+    fetchData();
   }, []);
-    return {isLoading,isError,data}
+
+  return { isLoading, isError, data };
 };
 
-export default useFetch
+export default useFetch;

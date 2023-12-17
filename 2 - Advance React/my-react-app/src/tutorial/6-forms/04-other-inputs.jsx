@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const frameworks = ["react", "angular", "vue", "svelte"];
 
 const OtherInputs = () => {
@@ -9,7 +10,7 @@ const OtherInputs = () => {
     console.log(e.target.checked);
     setShipping(e.target.checked);
   };
-
+  
   const handleFramework = (e) => {
     setFramework(e.target.value);
   };
@@ -51,5 +52,4 @@ const OtherInputs = () => {
     </div>
   );
 };
-
 export default OtherInputs;

@@ -7,15 +7,20 @@ const UncontrolledInputs = () => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
+    
     // get values one by one
     const name = formData.get("name");
     console.log(name);
+    
     // get all of them
     const newUser = Object.fromEntries(formData);
+    
     // do something (post request, add to list, etc)
     console.log(newUser);
+    
     // Gotcha - re-render won't clear out the values
     setValue(value + 1);
+    
     // reset values
     e.currentTarget.reset();
   };
@@ -24,6 +29,7 @@ const UncontrolledInputs = () => {
     <div>
       <form className="form" onSubmit={handleSubmit}>
         <h4>Form Data API</h4>
+        
         {/* name */}
         <div className="form-row">
           <label htmlFor="name" className="form-label">
@@ -31,6 +37,7 @@ const UncontrolledInputs = () => {
           </label>
           <input type="text" className="form-input" id="name" name="name" />
         </div>
+        
         {/* email */}
         <div className="form-row">
           <label htmlFor="email" className="form-label">
@@ -38,6 +45,7 @@ const UncontrolledInputs = () => {
           </label>
           <input type="email" className="form-input" id="email" name="email" />
         </div>
+        
         {/* email */}
         <div className="form-row">
           <label htmlFor="password" className="form-label">

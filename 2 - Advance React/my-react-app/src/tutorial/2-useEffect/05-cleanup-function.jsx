@@ -20,6 +20,8 @@ const RandomComponent = () => {
     }, 1000);
     // does not stop,keeps going
     // every time we render component new interval gets created
+    // return () => window.addEventListener("scroll",someFunc);
+
     return () => clearInterval(intID);
   }, []);
   return <h1>hello there</h1>;
