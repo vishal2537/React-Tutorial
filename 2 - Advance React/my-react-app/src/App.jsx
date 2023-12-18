@@ -29,8 +29,24 @@
 
 // import Starter from "./tutorial/7-useref/01-useRef-basics"
 
-import Starter from "./tutorial/8-custom-hooks/01-toggle"
-import Starter1 from "./tutorial/8-custom-hooks/02-fetch-data"
+// import Starter from "./tutorial/8-custom-hooks/01-toggle"
+// import Starter1 from "./tutorial/8-custom-hooks/02-fetch-data"
+
+// import Starter from "./tutorial/9-context-api/context/NavLinks"
+// import Starter1 from "./tutorial/9-context-api/context/Navbar"
+// import Starter2 from "./tutorial/9-context-api/context/UserContainer"
+// import Starter3 from "./tutorial/9-context-api/prop-drilling/Navbar"
+// import Starter4 from "./tutorial/9-context-api/prop-drilling/NavLinks"
+// import Starter5 from "./tutorial/9-context-api/prop-drilling/UserContainer"
+
+// import Starter from "./tutorial/10-useReducer/01-useReducer"
+// import Starter1 from "./tutorial/10-useReducer/actions" 
+// import Starter2 from "./tutorial/10-useReducer/reducer"
+
+import Starter from "./tutorial/11-performance/01-lower-state/index"
+import Starter1 from "./tutorial/11-performance/02-lower-state-challenge/index"
+import Starter2 from "./tutorial/11-performance/03-hooks/index"
+import Starter3 from "./tutorial/11-performance/04-react-18/index" 
 
 import "./App.css";
 
@@ -39,9 +55,9 @@ function App() {
     <div className="container">
       <h1>Advanced React</h1>
       {/* <Starter /> */}
-      <Starter1 />
+      {/* <Starter1 /> */}
       {/* <Starter2 /> */}
-      {/* <Starter3 /> */}
+      <Starter3 />
       {/* <Starter4 /> */}
       {/* <Starter5 /> */}
       {/* <Starter6 /> */}

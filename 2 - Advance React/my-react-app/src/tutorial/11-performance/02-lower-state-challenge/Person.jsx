@@ -6,3 +6,4 @@ const Person = ({ name }) => {
   );
 };
 export default Person;
+  

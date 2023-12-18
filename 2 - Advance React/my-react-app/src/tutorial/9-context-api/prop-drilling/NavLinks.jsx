@@ -15,5 +15,4 @@ const NavLinks = ({ user, logout }) => {
     </div>
   );
 };
-
 export default NavLinks;

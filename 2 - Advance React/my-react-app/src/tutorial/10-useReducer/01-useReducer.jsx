@@ -1,6 +1,6 @@
 import { useState, useReducer } from "react";
-import { data, people } from "../../../data";
-import { CLEAR_LIST, RESET_LIST, REMOVE_LIST } from "./action";
+import { data } from "../../../data";
+import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM } from "./actions";
 import reducer from "./reducer";
 
 const defaultState = {
@@ -8,11 +8,11 @@ const defaultState = {
   isLoading: false,
 };
 
-const reducerBasics = () => {
+const ReducerBasics = () => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const removeItem = (id) => {
-    dispatch({ type: REMOVE_LIST, payload: { id } });
+    dispatch({ type: REMOVE_ITEM, payload: { id } });
   };
 
   const clearList = () => {

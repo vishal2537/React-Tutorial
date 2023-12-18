@@ -4,14 +4,13 @@ import { useState } from "react";
 import NavLinks from "./NavLinks";
 
 export const NavbarContext = createContext();
-// returns two component
-// Provider - wrap return in parental component
+// returns two components
+// Provider - wrap return in Parent Component
 // Consumer - replaced by useContext() hook
 
 // custom hook
-export const useAppContext = () => {
-  useContext(NavbarContext);
-};
+
+export const useAppContext = () => useContext(NavbarContext);
 
 const Navbar = () => {
   const [user, setUser] = useState({ name: "bob" });
@@ -27,5 +26,4 @@ const Navbar = () => {
     </NavbarContext.Provider>
   );
 };
-
 export default Navbar;
